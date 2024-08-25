@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: traffic-api
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/traffic_db
+      username: root
+      password: password
+
+server:
+  port: 9090
+
+logging:
+  level:
+    root: info

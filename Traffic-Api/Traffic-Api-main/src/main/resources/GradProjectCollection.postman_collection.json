@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "c697634f-ea7c-48e6-8c92-158a75a5b19d",
+		"name": "GradProjectCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34629457"
+	},
+	"item": [
+		{
+			"name": "Add Traffic Light",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"latitude\": \"123.456\",\r\n    \"longitude\": \"456.789\",\r\n    \"locationName\": \"Example Location\",\r\n    \"status\": \"ReD\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/v1/trafficlight",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"trafficlight"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTrafficLights",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/v1/trafficlight",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"trafficlight"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTrafficLight",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/v1/trafficlight/one/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"trafficlight",
+						"one",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Dependencies",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"trafficLightsDependecies\": [\r\n    {\r\n      \"first\": 1,\r\n      \"second\": 2\r\n    }, \r\n    {\r\n      \"first\": 2,\r\n      \"second\": 3\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/v1/trafficlight/dependencies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"trafficlight",
+						"dependencies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get TrafficLights Neighbours",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/v1/trafficlight/getTrafficLightNeighbours/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"trafficlight",
+						"getTrafficLightNeighbours",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update traffic light",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"trafficLightId\": 1,\r\n  \"latitude\": \"37.7749\",\r\n  \"longitude\": \"-122.4194\",\r\n  \"locationName\": \"San Francisco Intersection\",\r\n  \"status\": \"GREEN\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/v1/trafficlight",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"trafficlight"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateNeighboursToRedAndMainToGreen",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/v1/trafficlight/updateNeighboursToRedAndMainToGreen/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"trafficlight",
+						"updateNeighboursToRedAndMainToGreen",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update neighbours traffic lights to last status",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/v1/trafficlight/updateNeighboursAndMainToLastStatus/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"v1",
+						"trafficlight",
+						"updateNeighboursAndMainToLastStatus",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
